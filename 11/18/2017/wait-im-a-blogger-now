@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://i0.kym-cdn.com/photos/images/facebook/000/091/881/tumblr_le3iimRqBr1qe91wdo1_500.jpg">
 <meta property="article:published_time" content="2017-11-18T05:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T01:25:41.588Z">
+<meta property="article:modified_time" content="2025-11-20T17:01:13.541Z">
 <meta property="article:author" content="AxDSan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://i0.kym-cdn.com/photos/images/facebook/000/091/881/tumblr_le3iimRqBr1qe91wdo1_500.jpg">
@@ -453,7 +453,7 @@
             <p>Author：<a href="http://axdsan.github.io">AxDSan</a>
             <p>Link：<a href="http://axdsan.github.io/11/18/2017/wait-im-a-blogger-now">http://axdsan.github.io/11/18/2017/wait-im-a-blogger-now</a>
             <p>Publish date：<a href="http://axdsan.github.io/11/18/2017/wait-im-a-blogger-now">November 18th 2017, 12:00:00 am</a>
-            <p>Update date：<a href="http://axdsan.github.io/11/18/2017/wait-im-a-blogger-now">November 19th 2025, 8:25:41 pm</a>
+            <p>Update date：<a href="http://axdsan.github.io/11/18/2017/wait-im-a-blogger-now">November 20th 2025, 12:01:13 pm</a>
             <p>License：<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a></p>
         </div>
     <!-- paginator -->
@@ -567,13 +567,13 @@
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-            <span class="sidebar-tag-name" data-tags="android_re">
-                <span class="iconfont-archer">&#xe606;</span>
-                android_re
-            </span>
             <span class="sidebar-tag-name" data-tags="reversing">
                 <span class="iconfont-archer">&#xe606;</span>
                 reversing
+            </span>
+            <span class="sidebar-tag-name" data-tags="android_re">
+                <span class="iconfont-archer">&#xe606;</span>
+                android_re
             </span>
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

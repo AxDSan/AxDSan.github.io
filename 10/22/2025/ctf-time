@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://imgur.com/reaLFYA.png">
 <meta property="og:image" content="https://imgur.com/rJzk1Fx.png">
 <meta property="article:published_time" content="2025-10-22T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T16:51:09.670Z">
+<meta property="article:modified_time" content="2025-11-20T17:01:07.493Z">
 <meta property="article:author" content="AxDSan">
 <meta property="article:tag" content="android_re">
 <meta name="twitter:card" content="summary">
@@ -479,7 +479,7 @@
             <p>Author：<a href="http://axdsan.github.io">AxDSan</a>
             <p>Link：<a href="http://axdsan.github.io/10/22/2025/ctf-time">http://axdsan.github.io/10/22/2025/ctf-time</a>
             <p>Publish date：<a href="http://axdsan.github.io/10/22/2025/ctf-time">October 22nd 2025, 12:00:00 am</a>
-            <p>Update date：<a href="http://axdsan.github.io/10/22/2025/ctf-time">November 20th 2025, 11:51:09 am</a>
+            <p>Update date：<a href="http://axdsan.github.io/10/22/2025/ctf-time">November 20th 2025, 12:01:07 pm</a>
             <p>License：<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a></p>
         </div>
     <!-- paginator -->
@@ -593,13 +593,13 @@
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-            <span class="sidebar-tag-name" data-tags="android_re">
-                <span class="iconfont-archer">&#xe606;</span>
-                android_re
-            </span>
             <span class="sidebar-tag-name" data-tags="reversing">
                 <span class="iconfont-archer">&#xe606;</span>
                 reversing
+            </span>
+            <span class="sidebar-tag-name" data-tags="android_re">
+                <span class="iconfont-archer">&#xe606;</span>
+                android_re
             </span>
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
