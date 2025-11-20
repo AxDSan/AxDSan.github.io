@@ -10,27 +10,23 @@
     <meta name="copyright" content="AxDSan">
         <meta name="keywords" content="reverse-engineering,web-development">
     <meta name="description" content="A place where I blog about Reverse Engineering, Web Development and More!">
-    <meta name="description" content="Dear Reader,Hello and welcome to this post, I will discuss my adventures on a Rust CrackMe I saw in a Reverse Engineering Discord server, this CrackMe as you may know already is powered by the Rust La">
+    <meta name="description" content="…Apparently I am, and I’m here to just say things about Frameworks and to express about them through my own personal eye and from personal experience. I welcome you to read and leave constructive mes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reversing a Rust CrackMe!">
-<meta property="og:url" content="http://axdsan.github.io/2018/04/03/reversing-a-rust-crackme/index.html">
+<meta property="og:title" content="Wait Am I a Blogger Now!?">
+<meta property="og:url" content="http://axdsan.github.io/18/11/2017/wait-im-a-blogger-now/index.html">
 <meta property="og:site_name" content="AxDSan Lair">
-<meta property="og:description" content="Dear Reader,Hello and welcome to this post, I will discuss my adventures on a Rust CrackMe I saw in a Reverse Engineering Discord server, this CrackMe as you may know already is powered by the Rust La">
+<meta property="og:description" content="…Apparently I am, and I’m here to just say things about Frameworks and to express about them through my own personal eye and from personal experience. I welcome you to read and leave constructive mes">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.imgur.com/uu0OGdf.png">
-<meta property="og:image" content="https://i.imgur.com/9yPrps6.png">
-<meta property="og:image" content="https://i.imgur.com/Sv0wOkt.png">
-<meta property="og:image" content="https://i.imgur.com/MU0CGfY.png">
-<meta property="article:published_time" content="2018-04-03T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T17:01:11.532Z">
+<meta property="og:image" content="http://i0.kym-cdn.com/photos/images/facebook/000/091/881/tumblr_le3iimRqBr1qe91wdo1_500.jpg">
+<meta property="article:published_time" content="2017-11-18T05:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-20T17:01:13.541Z">
 <meta property="article:author" content="AxDSan">
-<meta property="article:tag" content="reversing">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/uu0OGdf.png">
+<meta name="twitter:image" content="http://i0.kym-cdn.com/photos/images/facebook/000/091/881/tumblr_le3iimRqBr1qe91wdo1_500.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="https://imgur.com/sjtapYI.jpg">
-    <title>Reversing a Rust CrackMe! · AxDSan&#39;s Lair</title>
+    <title>Wait Am I a Blogger Now!? · AxDSan&#39;s Lair</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -248,7 +244,7 @@
             <a href="/">AxDSan&#39;s Lair</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name">Reversing a Rust CrackMe!</a>
+            <a href="#" class="post-name">Wait Am I a Blogger Now!?</a>
         </div>
     </div>
 </header>
@@ -275,7 +271,7 @@
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-                Reversing a Rust CrackMe!
+                Wait Am I a Blogger Now!?
             <!-- 404 -->
         </h1>
         <!-- 副标题 -->
@@ -287,14 +283,13 @@
             <div class="post-intros">
                 <!-- 文章页标签  -->
                     <div class="post-intro-tags" >
-        <a class="post-tag" href="javascript:void(0);" data-tags="reversing">reversing</a>
 </div>
 
                 <!-- 文章字数统计 -->
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2018/04/03</span>
+                    <span class="post-intro-time">2017/11/18</span>
                     <!-- busuanzi -->
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                             <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
@@ -446,51 +441,30 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Dear-Reader"><a href="#Dear-Reader" class="headerlink" title="Dear Reader,"></a>Dear Reader,</h1><p>Hello and welcome to this post, I will discuss my adventures on a Rust CrackMe I saw in a Reverse Engineering Discord server, this CrackMe as you may know already is powered by the Rust Lang, This language is AMAZING and it’s really close to C++.</p>
-<h1 id="Hello-Rust-Nice-to-Meet-You"><a href="#Hello-Rust-Nice-to-Meet-You" class="headerlink" title="Hello Rust! Nice to Meet You!"></a>Hello Rust! Nice to Meet You!</h1><p><img src="https://i.imgur.com/uu0OGdf.png"></p>
-<p>So, I downloaded the CrackMe and quickly went into my good ol’ bud x64DBG, which is the one I commonly use for my RE projects… Started analyzing it and… Wait what? as soon as I hit the <code>OEP</code> I start seeing a bounch of weird things (being new to a Rust binary, that’s quite understandable), eg. instead of having a normal control flow, I started seeing how I had to keep on going further deep in between calls and things like that. So that was quite painful to go through, Also I couldn’t trace step out because it would obivously would skip the calls and then I would be out of luck, and also couldn’t trace call stack because it showed no hints what so ever of what was being called, it would always show calls from kernel and stuff, but not from the internal binary.</p>
-<h1 id="IDA-to-the-rescue"><a href="#IDA-to-the-rescue" class="headerlink" title="IDA to the rescue!"></a>IDA to the rescue!</h1><p>So as I called it a defeat with x64DBG, I called in IDA, and started working on it, IDA has cool graphs and plugins that will help you setup your pace back on tracks and will allow you to have a more broader approach when analyzing something…</p>
-<p>So once I started working on it, I noticed where the binary had some interesting strings showing up, so I went there and lo’ and behold there they were!</p>
-<p><img src="https://i.imgur.com/9yPrps6.png"></p>
-<p>So I went to where it was being used, and here we are, finally!</p>
-<p><img src="https://i.imgur.com/Sv0wOkt.png"></p>
-<p>So I quickly assumed this was the main function where everything was going down, so I love the renaming feature of IDA so why not use it? 😜</p>
-<p>So, not only I noticed that Rust does all those weird things with the control flow as I mentioned before, but also the compiler adds a bunch of other junk stuff, however thankfully, now that I got the main function, I can call it a day and skip all the junk stuff, and just focus on this part only.</p>
-<h1 id="CrackMe-What’s-your-sorcery"><a href="#CrackMe-What’s-your-sorcery" class="headerlink" title="CrackMe, What’s your sorcery?"></a>CrackMe, What’s your sorcery?</h1><p>So this CrackMe, (skipping ahead some prior reversing) was relatively simpe as the name suggests, not minding any of the junk stuff compiler adds, I just had to focus on this part:</p>
-<p><img src="https://i.imgur.com/MU0CGfY.png"></p>
-<p>This is where the meat is, more importantly inside <code>checkPwdHash</code> at <code>0xE11411</code> function that you see there, is where the actual algorithm that checks password is.</p>
-<p>and it’s as simple as, getting all the bytes in a byte arry, and sum them all together, the output will be the checksum for the string, viola!</p>
-<p>so in python it would be someting like this:</p>
-<pre><code class="language-python">def calc_checksum(the_bytes):
-    return b&#39;%02X&#39; % (sum(the_bytes))
-
-bytes = [0x70, 0x65, 0x70, 0x65] # bytes = &#39;pepe&#39;
-
-print(calc_checksum(bytes)) # output: b&#39;1AA&#39;
-</code></pre>
+        <p><img src="http://i0.kym-cdn.com/photos/images/facebook/000/091/881/tumblr_le3iimRqBr1qe91wdo1_500.jpg"></p>
+<p>…Apparently I am, and I’m here to just say things about Frameworks and to express about them through my own personal eye and from personal experience.</p>
+<p>I welcome you to read and leave constructive messages whenever is required or even if a post seemed worthy of a good laugh or not, you are welcome to leave a constructive comment regarding what you read.</p>
+<p>Hope you like the content I will be uploading and hope you stay around for the while!</p>
+<p>See you at my other posts!</p>
 
     </article>
     <!-- license -->
         <div class="license-wrapper">
             <p>Author：<a href="http://axdsan.github.io">AxDSan</a>
-            <p>Link：<a href="http://axdsan.github.io/2018/04/03/reversing-a-rust-crackme/">http://axdsan.github.io/2018/04/03/reversing-a-rust-crackme/</a>
-            <p>Publish date：<a href="http://axdsan.github.io/2018/04/03/reversing-a-rust-crackme/">April 3rd 2018, 12:00:00 am</a>
-            <p>Update date：<a href="http://axdsan.github.io/2018/04/03/reversing-a-rust-crackme/">November 20th 2025, 12:01:11 pm</a>
+            <p>Link：<a href="http://axdsan.github.io/18/11/2017/wait-im-a-blogger-now/">http://axdsan.github.io/18/11/2017/wait-im-a-blogger-now/</a>
+            <p>Publish date：<a href="http://axdsan.github.io/18/11/2017/wait-im-a-blogger-now/">November 18th 2017, 12:00:00 am</a>
+            <p>Update date：<a href="http://axdsan.github.io/18/11/2017/wait-im-a-blogger-now/">November 20th 2025, 12:01:13 pm</a>
             <p>License：<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a></p>
         </div>
     <!-- paginator -->
     <ul class="post-paginator">
         <li class="next">
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2025/10/22/ctf-time/" title="Trellix - Google AndroidCTF Team Challenge 2025">
-                    <div class="nextTitle">Trellix - Google AndroidCTF Team Challenge 2025</div>
+                <a href="/21/11/2017/guess-what/" title="Guess what...?">
+                    <div class="nextTitle">Guess what...?</div>
                 </a>
         </li>
         <li class="previous">
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2017/11/21/guess-what/" title="Guess what...?">
-                    <div class="prevTitle">Guess what...?</div>
-                </a>
         </li>
     </ul>
     <!-- comment -->
@@ -540,7 +514,7 @@ print(calc_checksum(bytes)) # output: b&#39;1AA&#39;
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Dear-Reader"><span class="toc-number">1.</span> <span class="toc-text">Dear Reader,</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-Rust-Nice-to-Meet-You"><span class="toc-number">2.</span> <span class="toc-text">Hello Rust! Nice to Meet You!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IDA-to-the-rescue"><span class="toc-number">3.</span> <span class="toc-text">IDA to the rescue!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CrackMe-What%E2%80%99s-your-sorcery"><span class="toc-number">4.</span> <span class="toc-text">CrackMe, What’s your sorcery?</span></a></li></ol>
+                
             </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -567,25 +541,25 @@ print(calc_checksum(bytes)) # output: b&#39;1AA&#39;
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">10/22</span>
-            <a class="archive-post-title" href="/2025/10/22/ctf-time/">Trellix - Google AndroidCTF Team Challenge 2025</a>
+            <a class="archive-post-title" href="/22/10/2025/ctf-time/">Trellix - Google AndroidCTF Team Challenge 2025</a>
         </li>
                 </ul>
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">04/03</span>
-            <a class="archive-post-title" href="/2018/04/03/reversing-a-rust-crackme/">Reversing a Rust CrackMe!</a>
+            <a class="archive-post-title" href="/03/04/2018/reversing-a-rust-crackme/">Reversing a Rust CrackMe!</a>
         </li>
                 </ul>
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">11/21</span>
-            <a class="archive-post-title" href="/2017/11/21/guess-what/">Guess what...?</a>
+            <a class="archive-post-title" href="/21/11/2017/guess-what/">Guess what...?</a>
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">11/18</span>
-            <a class="archive-post-title" href="/2017/11/18/wait-im-a-blogger-now/">Wait Am I a Blogger Now!?</a>
+            <a class="archive-post-title" href="/18/11/2017/wait-im-a-blogger-now/">Wait Am I a Blogger Now!?</a>
         </li>
             </ul>
     </div>
@@ -593,13 +567,13 @@ print(calc_checksum(bytes)) # output: b&#39;1AA&#39;
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-            <span class="sidebar-tag-name" data-tags="reversing">
-                <span class="iconfont-archer">&#xe606;</span>
-                reversing
-            </span>
             <span class="sidebar-tag-name" data-tags="android_re">
                 <span class="iconfont-archer">&#xe606;</span>
                 android_re
+            </span>
+            <span class="sidebar-tag-name" data-tags="reversing">
+                <span class="iconfont-archer">&#xe606;</span>
+                reversing
             </span>
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
