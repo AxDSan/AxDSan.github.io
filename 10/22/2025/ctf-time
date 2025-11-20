@@ -5,26 +5,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="Abdias J">
+    <meta name="author" content="AxDSan">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="Abdias J">
+    <meta name="copyright" content="AxDSan">
         <meta name="keywords" content="reverse-engineering,web-development">
     <meta name="description" content="A place for my thoughts">
-    <meta name="description" content="IntroductionHello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for the Trellix Android Reverse Engineer p">
+    <meta name="description" content="IntroductionHello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for a Trellix Android Reverse Engineer pos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Trellix - Google AndroidCTF Team Challenge 2025">
-<meta property="og:url" content="http://axdsan.github.io/2025/11/19/ctf-time/index.html">
+<meta property="og:url" content="http://axdsan.github.io/10/22/2025/ctf-time">
 <meta property="og:site_name" content="AxDSan Lair">
-<meta property="og:description" content="IntroductionHello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for the Trellix Android Reverse Engineer p">
+<meta property="og:description" content="IntroductionHello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for a Trellix Android Reverse Engineer pos">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://imgur.com/qKqrowJ.png">
 <meta property="og:image" content="https://imgur.com/7qwSfrX.png">
 <meta property="og:image" content="https://imgur.com/VN4mDm0.png">
 <meta property="og:image" content="https://imgur.com/reaLFYA.png">
 <meta property="og:image" content="https://imgur.com/rJzk1Fx.png">
-<meta property="article:published_time" content="2025-11-19T05:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T02:23:56.614Z">
-<meta property="article:author" content="Abdias J">
+<meta property="article:published_time" content="2025-10-22T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-20T16:51:09.670Z">
+<meta property="article:author" content="AxDSan">
 <meta property="article:tag" content="android_re">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://imgur.com/qKqrowJ.png">
@@ -295,7 +295,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2025/11/19</span>
+                    <span class="post-intro-time">2025/10/22</span>
                     <!-- busuanzi -->
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                             <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
@@ -447,7 +447,7 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Hello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for the Trellix Android Reverse Engineer position! This challenge was really profound and insightful, and as you may know already, Android reversing can be quite a ride.</p>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Hello and welcome to this post, I will discuss my adventures on the Google AndroidCTF Team Challenge 2025, which I tackled as part of the process for a Trellix Android Reverse Engineer position! This challenge was really profound and insightful, and as you may know already, Android reversing can be quite a ride.</p>
 <h1 id="Initial-Analysis-Deobfuscation"><a href="#Initial-Analysis-Deobfuscation" class="headerlink" title="Initial Analysis &amp; Deobfuscation"></a>Initial Analysis &amp; Deobfuscation</h1><p><img src="https://imgur.com/qKqrowJ.png"></p>
 <p>So, I downloaded the APK and quickly went into my good ol’ bud JADX-GUI, which is the one I commonly use for my Android RE projects… Started analyzing it and… Wait what? The package was heavily obfuscated, so a little deobfuscation would come in handy. After cleaning it up, I checked the <code>AndroidManifest</code> and <code>MainActivity</code>, but they were pretty bland.</p>
 <p>I started digging deeper into the <code>Dashboard</code> and <code>Home</code> components, but the real fun started when I hit the <code>Notifications</code> section. I started seeing a bounch of weird things, eg. imports for <code>ByteArrays</code>, <code>IO Stream</code> and <code>Cipher</code>. So that was quite interesting to go through.</p>
@@ -476,10 +476,10 @@
     </article>
     <!-- license -->
         <div class="license-wrapper">
-            <p>Author：<a href="http://axdsan.github.io">Abdias J</a>
-            <p>Link：<a href="http://axdsan.github.io/2025/11/19/ctf-time/">http://axdsan.github.io/2025/11/19/ctf-time/</a>
-            <p>Publish date：<a href="http://axdsan.github.io/2025/11/19/ctf-time/">November 19th 2025, 12:00:00 am</a>
-            <p>Update date：<a href="http://axdsan.github.io/2025/11/19/ctf-time/">November 19th 2025, 9:23:56 pm</a>
+            <p>Author：<a href="http://axdsan.github.io">AxDSan</a>
+            <p>Link：<a href="http://axdsan.github.io/10/22/2025/ctf-time">http://axdsan.github.io/10/22/2025/ctf-time</a>
+            <p>Publish date：<a href="http://axdsan.github.io/10/22/2025/ctf-time">October 22nd 2025, 12:00:00 am</a>
+            <p>Update date：<a href="http://axdsan.github.io/10/22/2025/ctf-time">November 20th 2025, 11:51:09 am</a>
             <p>License：<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a></p>
         </div>
     <!-- paginator -->
@@ -488,7 +488,7 @@
         </li>
         <li class="previous">
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/04/03/reversing-a-rust-crackme/" title="Reversing a Rust CrackMe!">
+                <a href="/04/03/2018/reversing-a-rust-crackme" title="Reversing a Rust CrackMe!">
                     <div class="prevTitle">Reversing a Rust CrackMe!</div>
                 </a>
         </li>
@@ -566,26 +566,26 @@
             <div class="archive-year"> 2025 </div>
             <ul class="year-list">
         <li class="archive-post-item">
-            <span class="archive-post-date">11/19</span>
-            <a class="archive-post-title" href="/2025/11/19/ctf-time/">Trellix - Google AndroidCTF Team Challenge 2025</a>
+            <span class="archive-post-date">10/22</span>
+            <a class="archive-post-title" href="/10/22/2025/ctf-time">Trellix - Google AndroidCTF Team Challenge 2025</a>
         </li>
                 </ul>
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">04/03</span>
-            <a class="archive-post-title" href="/2018/04/03/reversing-a-rust-crackme/">Reversing a Rust CrackMe!</a>
+            <a class="archive-post-title" href="/04/03/2018/reversing-a-rust-crackme">Reversing a Rust CrackMe!</a>
         </li>
                 </ul>
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
         <li class="archive-post-item">
             <span class="archive-post-date">11/21</span>
-            <a class="archive-post-title" href="/2017/11/21/guess-what/">Guess what...?</a>
+            <a class="archive-post-title" href="/11/21/2017/guess-what">Guess what...?</a>
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">11/18</span>
-            <a class="archive-post-title" href="/2017/11/18/wait-im-a-blogger-now/">Wait Am I a Blogger Now!?</a>
+            <a class="archive-post-title" href="/11/18/2017/wait-im-a-blogger-now">Wait Am I a Blogger Now!?</a>
         </li>
             </ul>
     </div>
@@ -628,7 +628,7 @@
     var siteMeta = {
         url: "http://axdsan.github.io",
         root: siteMetaRoot,
-        author: "Abdias J"
+        author: "AxDSan"
     }
 </script>
 
